@@ -2,7 +2,7 @@ from telegram.ext import Updater, CommandHandler
 
 import requests
 
-url = 'https://myapicodecapsule-kinddn.codecapsules.co.za'
+url = 'https://myapicodecapsule-kinddn.codecapsules.co.za/get'
 data = requests.get(url) # requests data from API
 data = data.json() # converts return data to json
 
