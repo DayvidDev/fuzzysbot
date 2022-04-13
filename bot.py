@@ -23,7 +23,8 @@ def return_rates():
     return "Hello. Today, USD conversion rates are as follows: USD->CAD = "+str(cad_rate)+", USD->EUR = "+str(eur_rate)+", USD->ZAR = "+str(zar_rate)
 
 def return_matze():
-    return str(random.choice(Matze))
+    varstr = random.choice(Matze)
+    return +str(varstr)+
 
 def currency(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=return_rates())
@@ -32,7 +33,7 @@ def matthias(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=return_matze())
 
 def start(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="Hi! I respond to /currency and /matthiasle. Try me!")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Hi! I respond to /currency and /matthias. Try me!")
 
 
 
@@ -48,6 +49,7 @@ def main():
     currency_handler = CommandHandler("currency", currency)
     start_handler = CommandHandler("start", start)
 
+    dispatcher.add_handler(matthias_handler)
     dispatcher.add_handler(currency_handler)
     dispatcher.add_handler(start_handler)
 
