@@ -34,7 +34,7 @@ def main():
     dispatcher.add_handler(start_handler)
 
     PORT = int(os.environ.get('PORT', '443'))
-    HOOK_URL = https://fuzzysbot-bzgqir.codecapsules.co.za/ + '/' + TOKEN
+    HOOK_URL = 'https://fuzzysbot-bzgqir.codecapsules.co.za/' + '/' + TOKEN
     updater.start_webhook(listen='0.0.0.0', port=PORT, url_path=TOKEN, webhook_url=HOOK_URL)
     updater.idle()
 
