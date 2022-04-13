@@ -4,6 +4,7 @@ import requests, os, random
 
 
 
+
 url = 'https://myapicodecapsule-kinddn.codecapsules.co.za/get'
 data = requests.get(url) # requests data from API
 data = data.json() # converts return data to json
@@ -17,9 +18,6 @@ zar_rate = data['usd_rates']['ZAR']
 Matze = ['Jo genau!', 'Sicher net!', 'eh!', 'so wia du sesch', 'i wäs genau was du denksch', 'so wia du sesch']
 
 
-
-seed(1)
-#generate a random number
 
 def return_rates():
     return "Hello. Today, USD conversion rates are as follows: USD->CAD = "+str(cad_rate)+", USD->EUR = "+str(eur_rate)+", USD->ZAR = "+str(zar_rate)
