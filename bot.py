@@ -26,7 +26,7 @@ def return_rates():
     return "Hello. Today, USD conversion rates are as follows: USD->CAD = "+str(cad_rate)+", USD->EUR = "+str(eur_rate)+", USD->ZAR = "+str(zar_rate)
 
 def return_matze():
-    return Matze[randint(0,5)]
+    return str(Matze[randint(0,5)])
 
 def currency(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=return_rates())
