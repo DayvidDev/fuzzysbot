@@ -1,6 +1,9 @@
 from telegram.ext import Updater, CommandHandler
 
-import requests, os, random
+import requests, os
+from random import seed
+from random import random 
+
 
 url = 'https://myapicodecapsule-kinddn.codecapsules.co.za/get'
 data = requests.get(url) # requests data from API
