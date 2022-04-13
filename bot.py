@@ -1,8 +1,7 @@
 from telegram.ext import Updater, CommandHandler
 
-import requests, os
-from random import seed
-from random import random 
+import requests, os, random
+
 
 
 url = 'https://myapicodecapsule-kinddn.codecapsules.co.za/get'
@@ -15,7 +14,7 @@ eur_rate = data['usd_rates']['EUR']
 zar_rate = data['usd_rates']['ZAR']
 
 #Matthias Sprüche
-Matze = ["Jo genau!", "Sicher net!", "eh!", "so wia du sesch", "i wäs genau was du denksch", "so wia du sesch"]
+Matze = ['Jo genau!', 'Sicher net!', 'eh!', 'so wia du sesch', 'i wäs genau was du denksch', 'so wia du sesch']
 
 
 
@@ -26,7 +25,7 @@ def return_rates():
     return "Hello. Today, USD conversion rates are as follows: USD->CAD = "+str(cad_rate)+", USD->EUR = "+str(eur_rate)+", USD->ZAR = "+str(zar_rate)
 
 def return_matze():
-    return str(Matze[randint(0,5)])
+    return str(random.choice(Matze)
 
 def currency(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=return_rates())
