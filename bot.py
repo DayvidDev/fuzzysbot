@@ -24,7 +24,7 @@ def return_rates():
 
 def return_matze():
     varstr = random.choice(Matze)
-    return +str(varstr)+
+    return str(varstr)
 
 def currency(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=return_rates())
