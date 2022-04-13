@@ -1,6 +1,6 @@
 from telegram.ext import Updater, CommandHandler
 
-import requests
+import requests, os
 
 url = 'https://myapicodecapsule-kinddn.codecapsules.co.za/get'
 data = requests.get(url) # requests data from API
