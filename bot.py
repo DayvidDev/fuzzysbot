@@ -15,7 +15,7 @@ eur_rate = data['usd_rates']['EUR']
 zar_rate = data['usd_rates']['ZAR']
 
 #Matthias Sprüche
-Matze = ['Jo genau!', 'Sicher net!', 'eh!', 'so wia du sesch', 'i wäs genau was du denksch', 'so wia du sesch']
+Matze = ['Jo genau!', 'Sicher net!', 'eh!', 'so wia du sesch', 'i wäs genau was du denksch', 'I weiss genau was ihr etz alle denken', 'Fist of Lazarus']
 
 
 
@@ -33,7 +33,7 @@ def matthias(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=return_matze())
 
 def start(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="Hi! I respond to /currency and /matthias. Try me!")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="I bims, dr Matthias. /currency, /matthias.")
 
 
 
