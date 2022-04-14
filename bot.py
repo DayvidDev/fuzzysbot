@@ -15,7 +15,9 @@ eur_rate = data['usd_rates']['EUR']
 zar_rate = data['usd_rates']['ZAR']
 
 #Matthias Sprüche
-Matze = ['Jo genau!', 'Sicher net!', 'eh!', 'so wia du sesch', 'i wäs genau was du denksch', 'I weiss genau was ihr etz alle denken', 'Fist of Lazarus']
+Matze = ['Jo genau!', 'Sicher net!', 'eh!', 'so wia du sesch', 'i wäs genau was du denksch', 'I weiss genau was ihr etz alle denken', 'Fist of Lazarus', 'Voll, voll']
+#Sichla
+Sichlor = ['Des isch boda kurzfrischtig']
 
 
 
@@ -25,6 +27,8 @@ def return_rates():
 def return_matze():
     varstr = random.choice(Matze)
     return str(varstr)
+def retun_sichla()
+    return str(random.choice(Sichlor))
 
 def currency(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=return_rates())
@@ -32,8 +36,11 @@ def currency(update, context):
 def matthias(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=return_matze())
 
+def sichla(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text=return_sichla())
+    
 def start(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="I bims, dr Matthias. /currency, /matthias.")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="I bims, dr Matthias. /currency, /matthias, /sichla.")
 
 
 
@@ -47,10 +54,12 @@ def main():
 
     matthias_handler = CommandHandler("matthias", matthias)
     currency_handler = CommandHandler("currency", currency)
+    sichla_handler = CommandHandler("sichla", sichla)
     start_handler = CommandHandler("start", start)
 
     dispatcher.add_handler(matthias_handler)
     dispatcher.add_handler(currency_handler)
+    dispatcher.add_handler(sichla_handler)
     dispatcher.add_handler(start_handler)
 
     PORT = int(os.environ.get('PORT', '443'))
