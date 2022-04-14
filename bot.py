@@ -27,7 +27,7 @@ def return_rates():
 def return_matze():
     varstr = random.choice(Matze)
     return str(varstr)
-def retun_sichla()
+def return_sichla()
     return str(random.choice(Sichlor))
 
 def currency(update, context):
