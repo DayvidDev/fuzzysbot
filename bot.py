@@ -15,7 +15,9 @@ eur_rate = data['usd_rates']['EUR']
 zar_rate = data['usd_rates']['ZAR']
 
 #Matthias Sprüche
-Matze = ['Jo genau!', 'Sicher net!', 'eh!', 'so wia du sesch', 'i wäs genau was du denksch', 'I weiss genau was ihr etz alle denken', 'Fist of Lazarus', 'Voll, voll']
+Matze = ['Jo genau!', 'Sicher net!', 'eh!', 'so wia du sesch', 'i wäs genau was du denksch', \
+         'I weiss genau was ihr etz alle denken', 'Fist of Lazarus', 'Voll, voll'\
+        ,'Es isch scho so', 'jo läääck! so viiiiel!', 'Halt, a Gaudi', 'Figgen eu alle!']
 #Sichla
 Sichlor = ['Des isch boda kurzfrischtig']
 
