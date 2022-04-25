@@ -1,8 +1,11 @@
 from telegram.ext import Updater, CommandHandler
 
 import requests, os, random
+#from tinydb import TinyDB, Query
+#db =  TinyDB('workspace/mnt/data--capsule-diorty-x/db.json')
 
 
+db_directory = os.getenv('PERSISTENT_STORAGE_DIR')
 
 
 url = 'https://myapicodecapsule-kinddn.codecapsules.co.za/get'
